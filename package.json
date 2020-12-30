@@ -1,0 +1,20 @@
+{
+  "name": "action-test",
+  "version": "1.0.0",
+  "description": "this is a github-action test",
+  "main": "index.js",
+  "scripts": {
+    "bulid": "mkdir dist && cp -P ./src/a.txt ./dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/longhui520/action-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/longhui520/action-test/issues"
+  },
+  "homepage": "https://github.com/longhui520/action-test#readme"
+}

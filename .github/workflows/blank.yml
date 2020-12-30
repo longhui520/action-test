@@ -10,16 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          persist-credentials: false
-      - name: copy File
-        run: |
-          mkdir dist
-          cp -P ./src/a.txt ./dist/
+        uses: actions/checkout@master
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@3.5.7
+        uses: JamesIves/github-pages-deploy-action@master
         with:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
           BRANCH: gh-pages 
-          FOLDER: dist 
+          FOLDER: dist
+          BUILD_SCRIPT: npm init && npm run build
