@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@master
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@master
-        with:
+        env:
           ACCESS_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
           BRANCH: gh-pages 
           FOLDER: dist
