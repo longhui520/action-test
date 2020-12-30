@@ -4,7 +4,7 @@
   "description": "this is a github-action test",
   "main": "index.js",
   "scripts": {
-    "bulid": "mkdir dist && cp -P ./src/a.txt ./dist/"
+    "build": "mkdir ${PWD}/dist && cp -P ${PWD}/src/a.txt ${PWD}/dist/"
   },
   "repository": {
     "type": "git",
